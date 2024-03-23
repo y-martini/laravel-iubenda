@@ -8,7 +8,10 @@
     "autoload": {
         "psr-4": {
             "YMartini\\Laravel\\Iubenda\\": "src"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
