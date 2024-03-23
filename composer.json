@@ -1,0 +1,23 @@
+{
+    "name": "y-martini/laravel-iubenda",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YMartini\\Laravel\\Iubenda\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YMartini\\Laravel\\Iubenda\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
