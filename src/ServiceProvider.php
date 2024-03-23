@@ -8,6 +8,9 @@ class ServiceProvider extends Support\ServiceProvider
 {
   public function boot(): void
   {
+    $this->app->booted(function () {
+      $this->routes();
+    });
   }
 
   public function register(): void
@@ -25,5 +28,14 @@ class ServiceProvider extends Support\ServiceProvider
     );
 
     $this->mergeConfigFrom(__DIR__.'/../config/iubenda.php', 'iubenda');
+  }
+
+  private function routes(): void
+  {
+    if ($this->app->routesAreCached()) {
+      return;
+    }
+
+    Support\Facades\Route::name('iubenda.')->group(__DIR__.'/../routes/web.php');
   }
 }
