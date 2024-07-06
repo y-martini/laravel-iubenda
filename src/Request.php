@@ -48,7 +48,7 @@ abstract class Request
     {
         return $this->client->post(static::url(), [
             'headers' => $this->headers(),
-            RequestOptions::JSON => $this->body(),
+            \GuzzleHttp\RequestOptions::JSON => $this->body(),
         ]);
     }
 }
