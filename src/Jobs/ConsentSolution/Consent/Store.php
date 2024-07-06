@@ -16,7 +16,7 @@ abstract class Store implements Contracts\Queue\ShouldQueue
     $this->response($this->request()->execute());
   }
 
-  abstract protected function request(): ConsentSolution\Consent\Requests\Store;
+  abstract protected function request(): ConsentSolution\Consent\Requests\Create;
 
-  abstract protected function response(ConsentSolution\Consent\Responses\Store $response): void;
+  abstract protected function response(ConsentSolution\Consent\Responses\Create $response): void;
 }
